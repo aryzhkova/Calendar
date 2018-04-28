@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calendar</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/foundation.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <script src="./assets/js/foundation.js" defer></script>
+    <script src="./assets/js/app.js" defer></script><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="maincontent">
+        <header class="header">
+          <div class="container header-container">
+            <div class="header__controls"><a class="btn btn_add" href="#" title="add" id="add"><span class="btn__title btn__title_add">Добавить</span></a><a class="btn btn_update" href="#" title="update" id="update"><span class="btn__title btn__title_update">Обновить</span></a></div>
+            <div class="header__search">
+              <div class="search">
+                <form class="search__form">
+                  <input class="search__submit" type="submit" value="" title="search">
+                  <input class="search__input" type="text" name="search" placeholder="Событие, дата ">
+                </form>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="main">
+          <section class="section">
+            <div class="container">
+              <div class="calendar">
+                <div class="calendar__controls">
+                  <div class="date"><a class="btn btn_prev" href="#" title="prev"><span class="btn__title btn__title_prev"></span></a>
+                    <div class="date__text"></div><a class="btn btn_next" href="#" title="next"><span class="btn__title btn__title_next"></span></a>
+                  </div><a class="btn btn_today" href="#" title="today"><span class="btn__title btn__title_today">Сегодня</span></a>
+                </div>
+                <div class="calendar__content">
+                  <div class="calendar__header">
+                    <div class="calendar__header-title">Понедельник</div>
+                    <div class="calendar__header-title">Вторник</div>
+                    <div class="calendar__header-title">Среда</div>
+                    <div class="calendar__header-title">Четверг</div>
+                    <div class="calendar__header-title">Пятница</div>
+                    <div class="calendar__header-title">Суббота</div>
+                    <div class="calendar__header-title">Воскресенье</div>
+                  </div>
+                  <div class="calendar__table" id="calendar"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+      <div class="wrap-event">
+        <form class="event__form" id="eventForm">
+          <div class="title">Новое событие</div>
+          <input class="event__form-input" type="text" name="date" id="date" placeholder="Дата" required>
+          <input class="event__form-input" type="text" name="title" placeholder="Название" required>
+          <textarea class="event__form-ta" name="desc" placeholder="Описание" rows="3"></textarea>
+          <button class="btn btn_save" type="submit" id="save" form="eventForm">Сохранить</button>
+          <button class="btn btn_cancel" type="reset" id="cancel" form="eventForm">Отмена</button>
+          <button class="btn btn_close" type="button" id="close"></button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+extends ../_template
+
+block variables
+    - var title = 'Calendar'
+
+block content
+    .wrapper
+        .maincontent
+            header.header
+                .container.header-container
+                    .header__controls
+                        a.btn.btn_add(href="#" title="add" id="add")
+                            span.btn__title.btn__title_add Добавить
+                        a.btn.btn_update(href="#" title="update" id="update")
+                            span.btn__title.btn__title_update Обновить
+                    .header__search
+                        .search
+                            form.search__form
+                                input.search__submit(type="submit" value="" title="search")
+                                input.search__input(type="text" name="search" placeholder="Событие, дата ")
+            main.main
+                section.section
+                    .container
+                        .calendar
+                            .calendar__controls
+                                .date
+                                    a.btn.btn_prev(href="#" title="prev")
+                                        span.btn__title.btn__title_prev
+                                    .date__text
+                                    a.btn.btn_next(href="#" title="next")
+                                        span.btn__title.btn__title_next
+                                a.btn.btn_today(href="#" title="today")
+                                    span.btn__title.btn__title_today Сегодня
+                            .calendar__content
+                                .calendar__header
+                                    .calendar__header-title Понедельник
+                                    .calendar__header-title Вторник
+                                    .calendar__header-title Среда
+                                    .calendar__header-title Четверг
+                                    .calendar__header-title Пятница
+                                    .calendar__header-title Суббота
+                                    .calendar__header-title Воскресенье
+                                .calendar__table(id = "calendar")
+        footer.footer
+        .wrap-event
+            form.event__form(id="eventForm")
+                .title Новое событие
+                input.event__form-input(type="text" name="date" id="date" placeholder="Дата" required=true)
+                input.event__form-input(type="text" name="title" placeholder="Название" required=true)
+                textarea.event__form-ta(name="desc" placeholder="Описание" rows=3)
+                button.btn.btn_save(type="submit" id="save" form="eventForm") Сохранить
+                button.btn.btn_cancel(type="reset" id="cancel" form="eventForm") Отмена
+                button.btn.btn_close(type="button" id="close" )

@@ -1,0 +1,76 @@
+.btn{
+  position: relative;
+  &_add,&_update,&_save,&_cancel{
+    display: inline-block;
+    padding: 5px 10px;
+    background: $blue;
+    text-decoration: none;
+    color:$white;
+    margin-right: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+  }
+  &_prev,&_next{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border:2px solid $grey;
+    border-radius: 3px;
+
+  }
+  &_prev{
+    &:before{
+      display: block;
+      content: "";
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      width:0;
+      border-right: 3px solid $black;
+      border-left: 0px solid transparent;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+    }
+  }
+  &_next{
+    &:before{
+      display: block;
+      content: "";
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      width:0;
+      border-left: 3px solid $black;
+      border-right: 0px solid transparent;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+    }
+  }
+  &_today{
+    display: inline-block;
+    border:2px solid $grey;
+    border-radius: 3px;
+    padding: 0 5px;
+    text-decoration: none;
+    color:$darkgrey;
+  }
+  &_close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    width:25px;
+    height:25px;
+    padding: 5px;
+    border: none;
+    background: $white url("../img/icons/close1.png") center no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    outline: none;
+  }
+}
